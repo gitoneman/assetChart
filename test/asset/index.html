@@ -1,0 +1,56 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		html,body,#main {
+			width: 100%;
+			height: 100%;
+			background: #333;
+		}
+		#info {
+			position: absolute;
+			top: 30px;
+			right: 0px;
+			width: 300px;
+			height: 100px;
+			color: #eee;
+		}
+		#info .item {
+			margin: 3px 0px;
+		}
+	</style>
+</head>
+<body>
+	<div id="main"></div>
+	<div id="info">
+		<h2>当前资产：<span class="J_name"></span></h2>
+		<p class="item"><strong>状态：活跃</strong></p>
+		<p class="item "><strong>工单数：<span class="J_work"></span></strong></p>
+		<p class="item "><strong>告警数：<span class="J_alarm"></span></strong></p>
+		<p class="item "><strong>eps：<span class="J_eps"></span></strong></p>
+		<!-- <p class="item"><strong>查看报表</strong></p>
+		<p class="item"><strong>查看性能监控</strong></p> -->
+	</div>
+	<script type="text/javascript" src="../../doc/asset/js/esl/esl.js"></script>
+	<script>
+		require.config({
+	        packages: [
+	            {
+	                name: 'zrender',
+	                location: '../../src',
+	                main: 'zrender'
+	            }
+	        ],
+	        paths:{
+	        	"tool":"../../src/tool"
+	        }
+	    });	    
+	</script>
+	<script type="text/javascript" src="./main.js"></script>
+</body>
+</html>
